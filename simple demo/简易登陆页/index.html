@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Login</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="show-login-btn">
+			-> Show Login Form
+		</div>
+		<div class="login-box">
+			<span class="hide-login-btn">x</span>
+			<form action="index.html" method="POST" class="login-form">
+				<h1 class="form-title">Welcome</h1>
+				<input class="loginText" type="text" name=""  placeholder="username"/>
+				<input class="loginText" type="password" name="" placeholder="password" />
+				<input class="login-btn" type="submit" name="" value="Login"  />
+			</form>
+		</div>
+	</body>
+	<script>
+		const login_box = document.getElementsByClassName("login-box")[0];
+		const show_login = document.getElementsByClassName("show-login-btn")[0];
+		const hide_login =  document.getElementsByClassName("hide-login-btn")[0];
+		show_login.addEventListener('click',() => {
+			login_box.classList.add('showed');
+		})
+		hide_login.addEventListener('click',() => {
+			login_box.classList.remove('showed');
+		})
+	</script>
+</html>
